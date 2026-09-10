@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ThemeLogo } from "../../components/theme-logo";
 import { ThemeToggle } from "../../components/theme-toggle";
+import { InstallCard } from "../../components/install-card";
 
 export default function CardPage() {
   return (
@@ -25,6 +26,7 @@ export default function CardPage() {
           <strong>Escaneie para conectar</strong>
           <small>links.vlopcas.dev</small>
         </div>
+        <InstallCard />
       </section>
     </main>
   );

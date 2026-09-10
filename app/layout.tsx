@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: "Portfólio, projetos, currículo e canais de contato.",
     images: ["/social-preview.png"],
   },
-  manifest: "/manifest.webmanifest",
   icons: {
     icon: [
       { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },

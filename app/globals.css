@@ -198,6 +198,15 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
 .scan-instruction > span { width: 42px; height: 2px; margin-bottom: 7px; background: var(--accent); box-shadow: 0 0 12px var(--glow); }
 .scan-instruction strong { font-size: clamp(.92rem, 3.4vw, 1.05rem); letter-spacing: .015em; }
 .scan-instruction small { color: var(--muted); font-size: .78rem; letter-spacing: .06em; }
+.install-card { display: grid; justify-items: center; gap: 9px; margin-top: -12px; }
+.install-card button { display: inline-flex; min-height: 2.55rem; align-items: center; justify-content: center; gap: .5rem; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .55rem; background: color-mix(in srgb, var(--surface) 78%, transparent); color: var(--muted); font-size: .76rem; font-weight: 700; cursor: pointer; transition: color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.install-card button span { color: var(--accent); font-size: 1rem; line-height: 1; }
+.install-card button:hover, .install-card button:focus-visible { color: var(--text); border-color: var(--accent); box-shadow: 0 8px 22px var(--glow); transform: translateY(-2px); }
+.install-card p { max-width: 34ch; margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.45; }
+
+@media (display-mode: standalone) {
+  .install-card { display: none; }
+}
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
@@ -239,6 +248,8 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
   .event-card-identity p { margin-top: 9px; }
   .qr-frame { width: min(52svh, 76vw, 330px); }
   .scan-instruction > span { margin-bottom: 3px; }
+  .install-card { margin-top: -8px; }
+  .install-card button { min-height: 2.25rem; padding-block: .4rem; }
 }
 
 @media (max-width: 390px) {
