@@ -162,6 +162,43 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
 .social a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
 .social svg { width: 20px; height: 20px; }
 
+/* Presential digital card */
+.event-card-shell {
+  display: grid;
+  width: min(100% - 28px, 680px);
+  min-height: 100svh;
+  margin-inline: auto;
+  grid-template-rows: auto 1fr;
+  padding: 24px 0;
+}
+
+.event-card-topbar { display: flex; align-items: center; justify-content: space-between; }
+.event-card { display: grid; align-content: center; justify-items: center; gap: clamp(22px, 4svh, 38px); padding: 24px 0 34px; text-align: center; }
+.event-card-identity h1 { margin: 0; font-size: clamp(2.25rem, 9vw, 4rem); font-weight: 600; letter-spacing: -.055em; line-height: 1; }
+.event-card-identity p { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 14px 0 0; color: var(--accent); font-size: clamp(.68rem, 2.6vw, .78rem); font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.event-card-identity i { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+
+.qr-frame {
+  position: relative;
+  width: min(58svh, 84vw, 390px);
+  aspect-ratio: 1;
+  padding: clamp(10px, 2vw, 15px);
+  border: 1px solid color-mix(in srgb, var(--accent) 50%, var(--line));
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 22px 70px rgb(0 0 0 / 24%), 0 0 32px var(--glow);
+}
+
+.qr-frame::before, .qr-frame::after { position: absolute; width: 44px; height: 44px; border-color: var(--accent); content: ""; pointer-events: none; }
+.qr-frame::before { top: -5px; left: -5px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-radius: 22px 0 0; }
+.qr-frame::after { right: -5px; bottom: -5px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); border-radius: 0 0 22px; }
+.qr-frame img { display: block; width: 100%; height: 100%; border-radius: 12px; object-fit: contain; }
+
+.scan-instruction { display: grid; justify-items: center; gap: 5px; }
+.scan-instruction > span { width: 42px; height: 2px; margin-bottom: 7px; background: var(--accent); box-shadow: 0 0 12px var(--glow); }
+.scan-instruction strong { font-size: clamp(.92rem, 3.4vw, 1.05rem); letter-spacing: .015em; }
+.scan-instruction small { color: var(--muted); font-size: .78rem; letter-spacing: .06em; }
+
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
@@ -191,6 +228,17 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
   .main-links { grid-template-columns: 1fr; }
   .link-card, .portfolio-card { min-height: 130px; padding: 21px 18px; gap: 14px; border-radius: 16px; }
   .site-footer { min-height: 0; justify-content: center; gap: .8rem; flex-direction: column; align-items: center; margin-top: 0; padding-block: 1.25rem; border-top: 0; text-align: center; }
+  .event-card-shell { padding-block: 18px; }
+  .event-card { gap: clamp(18px, 3svh, 26px); padding: 20px 0 12px; }
+}
+
+@media (max-height: 700px) {
+  .event-card-shell { padding-block: 12px; }
+  .event-card { gap: 14px; padding-block: 12px 4px; }
+  .event-card-identity h1 { font-size: 2rem; }
+  .event-card-identity p { margin-top: 9px; }
+  .qr-frame { width: min(52svh, 76vw, 330px); }
+  .scan-instruction > span { margin-bottom: 3px; }
 }
 
 @media (max-width: 390px) {
