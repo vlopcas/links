@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:de Castro;Victor Lopes;;;
+FN:Victor Lopes de Castro
+TITLE:Dados, Software e IA
+TEL;TYPE=CELL,VOICE:+5562991704877
+EMAIL;TYPE=INTERNET:victorlcastro.dsa@gmail.com
+URL:https://vlopcas.dev
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/victorlcastro
+X-SOCIALPROFILE;TYPE=github:https://github.com/vlopcas
+NOTE:Portfólio: https://vlopcas.dev\nLinkedIn: https://www.linkedin.com/in/victorlcastro\nGitHub: https://github.com/vlopcas
+REV:20260910T000000Z
+END:VCARD

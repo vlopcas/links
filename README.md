@@ -14,3 +14,5 @@ O site usa exportação estática do Next.js e é publicado no GitHub Pages pelo
 ## Cartão presencial
 
 `/card` é uma tela otimizada para abrir no celular e mostrar pessoalmente. O QR exibido aponta para `qr.vlopcas.dev/card`, que redireciona quem escanear para a página principal de links.
+
+`/connect` é a versão entregue a quem escaneia o cartão. Nela, o currículo é substituído pela opção de importar `victor-castro.vcf` para os contatos.
