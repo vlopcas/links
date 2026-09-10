@@ -1,11 +1,10 @@
-import { ArrowIcon, FileIcon, GithubIcon, LinkedinIcon, ProjectsIcon, SiteIcon, WhatsAppIcon } from "../components/icons";
+import { ArrowIcon, FileIcon, GithubIcon, LinkedinIcon, SiteIcon, WhatsAppIcon } from "../components/icons";
 import { ThemeToggle } from "../components/theme-toggle";
 import { ThemeLogo } from "../components/theme-logo";
 
 const whatsapp = "https://wa.me/5562991704877?text=Ol%C3%A1%2C%20Victor!%20Encontrei%20seu%20contato%20no%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.";
 
 const mainLinks = [
-  { title: "Projetos", description: "Projetos e estudos de caso com contexto técnico.", href: "https://vlopcas.dev/projects", icon: ProjectsIcon },
   { title: "Currículo", description: "Experiência, formação e competências em um só documento.", href: "https://vlopcas.dev/curriculum.pdf", icon: FileIcon },
 ];
 
