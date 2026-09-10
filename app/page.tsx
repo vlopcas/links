@@ -47,13 +47,12 @@ export default function Home() {
       </nav>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="https://vlopcas.dev" aria-label="Victor Castro, início"><ThemeLogo /></a>
-        <p>© {new Date().getFullYear()} Victor Castro.</p>
         <div className="social">
           <a href="https://github.com/vlopcas" target="_blank" rel="noreferrer" aria-label="GitHub"><GithubIcon /></a>
           <a href="https://www.linkedin.com/in/victorlcastro" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a>
           <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp"><WhatsAppIcon /></a>
         </div>
+        <p>© {new Date().getFullYear()} Victor Castro.</p>
       </footer>
     </main>
   );

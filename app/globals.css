@@ -67,7 +67,7 @@ button { font: inherit; }
 }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; }
-.wordmark, .footer-brand { display: block; }
+.wordmark { display: block; }
 .theme-logo { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; }
 .theme-logo img { grid-area: 1 / 1; display: block; width: 2.8rem; height: 2.8rem; object-fit: contain; }
 .logo-dark { display: none !important; }
@@ -155,7 +155,7 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
 .arrow svg { width: 17px; height: 17px; }
 .link-card:hover .arrow, .contact-link:hover .arrow { border-color: var(--accent); box-shadow: 0 5px 18px var(--glow); }
 
-.site-footer { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 54px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+.site-footer { display: flex; min-height: 8rem; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; margin-top: 54px; padding-block: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; text-align: center; }
 .site-footer p { margin: 0; }
 .social { display: flex; align-items: center; gap: 1.25rem; }
 .social a { display: grid; width: 2.65rem; height: 2.65rem; place-items: center; border: 1px solid var(--line); border-radius: 50%; transition: color .18s ease, border-color .18s ease, transform .18s ease; }
