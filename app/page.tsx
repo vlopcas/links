@@ -1,5 +1,6 @@
-import { ArrowIcon, FileIcon, GithubIcon, LinkedinIcon, MessageIcon, ProjectsIcon, SiteIcon } from "../components/icons";
+import { ArrowIcon, FileIcon, GithubIcon, LinkedinIcon, ProjectsIcon, SiteIcon, WhatsAppIcon } from "../components/icons";
 import { ThemeToggle } from "../components/theme-toggle";
+import { ThemeLogo } from "../components/theme-logo";
 
 const whatsapp = "https://wa.me/5562991704877?text=Ol%C3%A1%2C%20Victor!%20Encontrei%20seu%20contato%20no%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.";
 
@@ -8,18 +9,12 @@ const mainLinks = [
   { title: "Currículo", description: "Experiência, formação e competências em um só documento.", href: "https://vlopcas.dev/curriculum.pdf", icon: FileIcon },
 ];
 
-const contactLinks = [
-  { label: "GitHub", detail: "@vlopcas", href: "https://github.com/vlopcas", icon: GithubIcon },
-  { label: "LinkedIn", detail: "victorlcastro", href: "https://www.linkedin.com/in/victorlcastro", icon: LinkedinIcon },
-  { label: "WhatsApp", detail: "Enviar mensagem", href: whatsapp, icon: MessageIcon },
-];
-
 export default function Home() {
   return (
     <main className="page-shell">
       <div className="topbar">
         <a className="wordmark" href="https://vlopcas.dev" aria-label="Ir para o portfólio de Victor Castro">
-          VC<span>.</span>
+          <ThemeLogo />
         </a>
         <ThemeToggle />
       </div>
@@ -50,19 +45,17 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="contact-links">
-          {contactLinks.map(({ label, detail, href, icon: Icon }) => (
-            <a className="contact-link" href={href} key={label} target="_blank" rel="noreferrer">
-              <span className="contact-icon"><Icon /></span>
-              <span><strong>{label}</strong><small>{detail}</small></span>
-              <span className="arrow compact" aria-hidden="true"><ArrowIcon /></span>
-            </a>
-          ))}
-        </div>
       </nav>
 
-      <footer><span>© {new Date().getFullYear()} Victor Castro</span><span>Goiânia, GO</span></footer>
+      <footer className="site-footer">
+        <a className="footer-brand" href="https://vlopcas.dev" aria-label="Victor Castro, início"><ThemeLogo /></a>
+        <p>© {new Date().getFullYear()} Victor Castro.</p>
+        <div className="social">
+          <a href="https://github.com/vlopcas" target="_blank" rel="noreferrer" aria-label="GitHub"><GithubIcon /></a>
+          <a href="https://www.linkedin.com/in/victorlcastro" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp"><WhatsAppIcon /></a>
+        </div>
+      </footer>
     </main>
   );
 }
-

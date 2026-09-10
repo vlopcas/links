@@ -1,17 +1,31 @@
 "use client";
 
+import { useState } from "react";
+
+type Theme = "system" | "light" | "dark";
+
 export function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") return "system";
+    const saved = localStorage.getItem("links-theme");
+    return saved === "light" || saved === "dark" ? saved : "system";
+  });
+
   function toggleTheme() {
-    const current = document.documentElement.dataset.theme ?? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const next = current === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("links-theme", next);
+    const next: Theme = theme === "system" ? "light" : theme === "light" ? "dark" : "system";
+    setTheme(next);
+    if (next === "system") {
+      localStorage.removeItem("links-theme");
+      delete document.documentElement.dataset.theme;
+    } else {
+      localStorage.setItem("links-theme", next);
+      document.documentElement.dataset.theme = next;
+    }
   }
 
   return (
-    <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label="Alternar tema de cores">
-      <span className="theme-icon-dark" aria-hidden="true">◑</span>
-      <span className="theme-icon-light" aria-hidden="true">◐</span>
+    <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Tema atual: ${theme}. Alterar tema`} suppressHydrationWarning>
+      <span aria-hidden="true" suppressHydrationWarning>{theme === "system" ? "◐" : theme === "light" ? "☼" : "☾"}</span>
     </button>
   );
 }
