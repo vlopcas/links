@@ -190,7 +190,7 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
   .identity { padding-top: 48px; }
   .main-links { grid-template-columns: 1fr; }
   .link-card, .portfolio-card { min-height: 130px; padding: 21px 18px; gap: 14px; border-radius: 16px; }
-  .site-footer { min-height: 0; justify-content: center; gap: .8rem; flex-direction: column; align-items: center; margin-top: 0; padding-block: 1.25rem; text-align: center; }
+  .site-footer { min-height: 0; justify-content: center; gap: .8rem; flex-direction: column; align-items: center; margin-top: 0; padding-block: 1.25rem; border-top: 0; text-align: center; }
 }
 
 @media (max-width: 390px) {
