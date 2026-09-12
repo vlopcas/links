@@ -149,6 +149,8 @@ h1 { margin: 0; font-size: clamp(2.9rem, 10vw, 5.2rem); font-weight: 500; letter
 .card-icon svg { width: 22px; height: 22px; }
 .card-copy { display: grid; }
 .card-copy strong { font-size: clamp(1.28rem, 3vw, 1.48rem); font-weight: 750; letter-spacing: -.025em; }
+.vcf-note { margin: -3px 8px 0; color: var(--muted); font-size: .76rem; line-height: 1.5; }
+.vcf-note strong { color: var(--text); font-weight: 700; }
 
 .arrow { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent); transition: border-color .2s ease, box-shadow .2s ease; }
 .arrow svg { width: 17px; height: 17px; }

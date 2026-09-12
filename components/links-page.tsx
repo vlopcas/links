@@ -35,6 +35,7 @@ export function LinksPage({ variant }: LinksPageProps) {
             <span className="card-copy"><strong>{secondaryLink.title}</strong></span>
             <span className="arrow" aria-hidden="true"><ArrowIcon /></span>
           </a>
+          {variant === "connect" && <p className="vcf-note">Será baixado um arquivo <strong>.vcf</strong>. Abra-o para importar minhas informações para seus contatos.</p>}
         </div>
       </nav>
       <footer className="site-footer">
