@@ -8,8 +8,8 @@ type LinksPageProps = { variant: "default" | "connect" };
 
 export function LinksPage({ variant }: LinksPageProps) {
   const secondaryLink = variant === "connect"
-    ? { title: "Adicionar aos contatos", description: "Salve meu telefone, e-mail e links profissionais.", href: "/victor-castro.vcf", icon: ContactIcon }
-    : { title: "Currículo", description: "Experiência, formação e competências em um só documento.", href: "https://vlopcas.dev/cv-victor-castro.pdf", icon: FileIcon };
+    ? { title: "Adicionar aos contatos", href: "/victor-castro.vcf", icon: ContactIcon }
+    : { title: "Currículo", href: "https://vlopcas.dev/cv-victor-castro.pdf", icon: FileIcon };
   const SecondaryIcon = secondaryLink.icon;
 
   return (
@@ -26,13 +26,13 @@ export function LinksPage({ variant }: LinksPageProps) {
       <nav className="links-grid" aria-label="Links de Victor Castro">
         <a className="link-card portfolio-card" href="https://vlopcas.dev">
           <span className="card-icon"><SiteIcon /></span>
-          <span className="card-copy"><strong>Portfólio</strong><small>Conheça minha trajetória, os projetos em que trabalho e as decisões por trás de cada solução.</small></span>
+          <span className="card-copy"><strong>Portfólio</strong></span>
           <span className="arrow" aria-hidden="true"><ArrowIcon /></span>
         </a>
         <div className="main-links">
           <a className="link-card" href={secondaryLink.href}>
             <span className="card-icon"><SecondaryIcon /></span>
-            <span className="card-copy"><strong>{secondaryLink.title}</strong><small>{secondaryLink.description}</small></span>
+            <span className="card-copy"><strong>{secondaryLink.title}</strong></span>
             <span className="arrow" aria-hidden="true"><ArrowIcon /></span>
           </a>
         </div>
